@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contactez-nous pour partager vos idées, suggestions ou questions.">
+    <title>Fansite - Contact</title>
+    <link rel="stylesheet" href="fansite.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="fansite1.html">Assassin's Creed</a></li>
+                <li><a href="fansite2.html">Harry Potter</a></li>
+                <li><a href="fansite3.html">Super Smash Bros</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Contactez-nous</h1>
+        <form action="/submit" method="POST">
+            <label for="name">Nom :</label>
+            <input type="text" id="name" name="name" required placeholder="Votre nom">
+
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email" required placeholder="Votre email">
+
+            <label for="message">Message :</label>
+            <textarea id="message" name="message" rows="5" required placeholder="Votre message"></textarea>
+
+            <button type="submit">Envoyer</button>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2024 Fansite - Tous droits réservés</p>
+        <ul>
+            <li><a href="https://facebook.com" target="_blank">Facebook</a></li>
+            <li><a href="https://twitter.com" target="_blank">Twitter</a></li>
+            <li><a href="https://instagram.com" target="_blank">Instagram</a></li>
+        </ul>
+    </footer>
+</body>
+</html>
