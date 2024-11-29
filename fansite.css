@@ -5,232 +5,210 @@
     box-sizing: border-box;
 }
 
-/* BODY : FOND ET TYPOGRAPHIE */
+/* BODY : Thème sombre */
 body {
     font-family: 'Arial', sans-serif;
+    background: #1e1e2b; /* Fond sombre mais pas trop prononcé */
+    color: #e0e0e0; /* Texte clair pour lisibilité */
     line-height: 1.6;
-    color: #e0e0e0; /* Texte clair sur fond sombre */
-    background: #181822; /* Fond sombre élégant */
-    margin: 0;
-    padding: 0;
 }
 
-/* HEADER */
-header {
-    background: #222233; /* Fond sombre légèrement contrasté */
-    color: #e0e0e0;
-    text-align: center;
-    padding: 1rem 0;
-    border-bottom: 2px solid #333355;
-}
-
-header nav ul {
-    list-style: none;
+/* NAVIGATION : BARRE PRINCIPALE */
+.navbar {
     display: flex;
     justify-content: center;
-    gap: 1.5rem;
-}
-
-header nav ul li a {
-    text-decoration: none;
-    color: #e0e0e0;
-    font-weight: bold;
-    font-size: 1.1rem;
+    list-style: none; /* Supprime les points ou puces */
+    background: #1e1e2b; /* Fond sombre */
+    padding: 1rem 0;
     position: relative;
-    transition: color 0.3s ease, transform 0.3s ease;
+    margin: 0;
 }
 
-header nav ul li a::after {
-    content: '';
+/* STYLE DES LIENS */
+.navbar .nav-link {
+    text-decoration: none; /* Supprime le soulignement par défaut */
+    color: #e0e0e0; /* Texte clair */
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 0 1rem;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-link.active {
+    color: #00c9ff; /* Couleur différente pour la page active */
+}
+
+/* LIGNE ANIMÉE EN SURBRILLANCE */
+.navbar .nav-link::after {
+    content: "";
     position: absolute;
-    bottom: -5px;
+    bottom: -5px; /* Position juste en dessous du texte */
     left: 0;
     width: 0;
-    height: 2px;
-    background: #6c63ff; /* Violet doux pour les transitions */
+    height: 3px;
+    background: #6c63ff; /* Couleur de la ligne */
     transition: width 0.3s ease;
 }
 
-header nav ul li a:hover::after, header nav ul li a:focus::after {
-    width: 100%;
+.navbar .nav-link:hover::after, 
+.navbar .nav-link:focus::after {
+    width: 100%; /* Ligne s'étend sur toute la largeur au survol */
 }
 
-header nav ul li a:hover, header nav ul li a:focus {
-    color: #6c63ff;
-    transform: scale(1.1);
-    outline: none;
+.navbar .nav-link:hover {
+    color: #6c63ff; /* Change la couleur du texte au survol */
 }
 
-/* MAIN : SECTION PRINCIPALE */
-main {
+/* ADAPTATION ACCESSIBLE POUR LA NAVIGATION */
+.navbar .nav-link:focus {
+    outline: 2px solid #00c9ff; /* Bordure de focus pour clavier et lecteurs d'écran */
+    outline-offset: 3px;
+}
+/* TITRES PRINCIPAUX CENTRÉS */
+h1 {
+    text-align: center; /* Centre le texte */
+    font-size: 2.5rem; /* Taille ajustée pour un impact visuel */
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    color: #ffffff; /* Texte clair pour contraste */
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Légère ombre pour style */
+}
+
+/* GRILLE DES SECTIONS */
+.sections-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem auto;
+    max-width: 1200px;
+    padding: 0 1rem;
+}
+
+/* CARTES AVEC IMAGES INTERACTIVES */
+.section-card {
     text-align: center;
-    padding: 2rem;
-}
-
-.fansite-sections {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem;
-    margin-top: 2rem;
-}
-
-.fansite-section {
-    position: relative;
-    width: 300px;
-    border-radius: 10px;
-    overflow: hidden;
     background: #222233;
+    border-radius: 8px;
+    overflow: hidden;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.fansite-section:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.8);
 }
 
 .image-wrapper {
     position: relative;
-    width: 100%;
     height: 200px;
+    overflow: hidden;
 }
 
 .image-wrapper img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    display: block;
     transition: opacity 0.3s ease;
 }
 
-.image-wrapper .overlay {
+.image-wrapper:hover img {
+    opacity: 0.7; /* Effet d'assombrissement */
+}
+
+.overlay {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(28, 28, 40, 0.8); /* Contraste renforcé */
+    background: rgba(0, 0, 0, 0.7); /* Surbrillance sombre */
+    color: white;
     display: flex;
     justify-content: center;
     align-items: center;
     opacity: 0;
-    color: #ffffff;
-    text-align: center;
-    font-size: 1rem;
-    padding: 1rem;
     transition: opacity 0.3s ease;
-    font-weight: bold;
 }
 
 .image-wrapper:hover .overlay {
     opacity: 1;
 }
 
-.image-wrapper:hover img {
-    opacity: 0.7;
-}
-
-.fansite-section h2 {
-    margin: 1rem 0;
-    color: #f4f4f4;
-}
-
-.fansite-section h2 a {
-    text-decoration: none;
-    color: #6c63ff;
-    font-size: 1.2rem;
-    transition: color 0.3s ease;
-}
-
-.fansite-section h2 a:hover, .fansite-section h2 a:focus {
-    color: #00c9ff; /* Bleu vif pour inciter au clic */
-    text-decoration: underline;
-    outline: none;
-}
-
-/* BOUTONS DE FORMULAIRES */
-form {
-    max-width: 500px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    background: #252540;
+/* FORMULAIRE - Mise en page */
+.contact-form {
+    max-width: 600px;
+    margin: 2rem auto;
+    background: #252540; /* Fond sombre du formulaire */
     padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
 }
 
-form label {
-    font-weight: bold;
-    color: #e0e0e0;
+/* Étiquettes et champs */
+.contact-form .form-group {
+    margin-bottom: 1.5rem;
 }
 
-form input, form textarea {
-    padding: 0.5rem;
-    border: 1px solid #444;
-    border-radius: 4px;
+.contact-form label {
+    display: block;
     font-size: 1rem;
-    background: #2a2a42;
-    color: #f4f4f4;
+    color: #e0e0e0; /* Texte clair */
+    margin-bottom: 0.5rem;
 }
 
-form button {
-    background: #6c63ff;
-    color: white;
-    padding: 0.5rem;
+.contact-form input, 
+.contact-form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: 1px solid #444455;
+    border-radius: 5px;
+    background: #1e1e2b; /* Fond des champs */
+    color: #e0e0e0; /* Texte clair */
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form input:focus, 
+.contact-form textarea:focus {
+    border-color: #6c63ff; /* Bordure en surbrillance */
+    box-shadow: 0 0 5px rgba(108, 99, 255, 0.5);
+}
+
+/* Bouton d'envoi */
+.submit-button {
+    display: inline-block;
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.2rem;
+    color: #ffffff;
+    background: #6c63ff; /* Couleur vive du bouton */
     border: none;
-    border-radius: 4px;
-    font-size: 1rem;
+    border-radius: 5px;
     cursor: pointer;
-    transition: background 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-form button:hover {
+.submit-button:hover {
     background: #00c9ff;
+    transform: scale(1.05); /* Légère animation au survol */
+}
+
+/* CENTRAGE DU TEXTE (PARAGRAPHES GÉNÉRAUX) */
+main p {
+    text-align: center; /* Centre horizontalement le texte */
+    font-size: 1rem; /* Taille lisible pour tout écran */
+    margin: 1rem auto; /* Espacement vertical */
+    color: #d3d3d3; /* Couleur douce pour le fond sombre */
+    max-width: 800px; /* Largeur maximale pour une bonne lisibilité */
+    line-height: 1.8; /* Espacement entre les lignes */
+}
+
+/* CENTRAGE DU FORMULAIRE */
+.contact-form {
+    margin: 2rem auto; /* Centre le formulaire horizontalement */
 }
 
 /* FOOTER */
 footer {
-    background: #222233;
-    color: #f4f4f4;
-    padding: 1rem;
     text-align: center;
-}
-
-footer ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-}
-
-footer ul li a {
-    text-decoration: none;
-    color: #6c63ff;
-    font-size: 1rem;
-    transition: color 0.3s ease;
-}
-
-footer ul li a:hover, footer ul li a:focus {
-    color: #00c9ff;
-    text-decoration: underline;
-}
-
-/* ACCESSIBILITÉ POUR LES DALTONIENS */
-body {
-    filter: grayscale(10%);
-}
-
-/* MEDIA QUERIES POUR RESPONSIVE */
-@media (max-width: 768px) {
-    header nav ul {
-        flex-direction: column;
-    }
-
-    .fansite-sections {
-        flex-direction: column;
-        align-items: center;
-    }
+    background: #181822;
+    color: #e0e0e0;
+    padding: 1rem;
 }

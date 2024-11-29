@@ -3,44 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Fansite consacré à Assassin's Creed : actualités, événements, et plus encore.">
+    <meta name="description" content="Fansite consacré à Assassin's Creed : actualités, événements, et galerie.">
     <title>Fansite - Assassin's Creed</title>
     <link rel="stylesheet" href="fansite.css">
 </head>
 <body>
+    <!-- Barre de navigation principale -->
     <header>
         <nav>
-            <ul>
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="fansite1.html">Assassin's Creed</a></li>
-                <li><a href="fansite2.html">Harry Potter</a></li>
-                <li><a href="fansite3.html">Super Smash Bros</a></li>
-                <li><a href="contact.html">Contact</a></li>
+            <ul class="navbar">
+                <li><a href="index.html" class="nav-link active">Accueil</a></li>
+                <li><a href="fansite1.html" class="nav-link">Assassin's Creed</a></li>
+                <li><a href="fansite2.html" class="nav-link">Harry Potter</a></li>
+                <li><a href="fansite3.html" class="nav-link">Super Smash Bros</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
             </ul>
         </nav>
     </header>
+       
+    <!-- Section principale avec contenu -->
     <main>
         <h1>Assassin's Creed</h1>
-        <section>
-            <h2>Actualités</h2>
-            <p>Découvrez les dernières sorties et annonces autour d'Assassin's Creed.</p>
-        </section>
-        <section>
-            <h2>Galerie</h2>
-            <img src="images/assassins_creed_banner1.jpg.jpg" alt="Image d'Assassin's Creed">
-        </section>
-        <section>
-            <h2>Événements</h2>
-            <p>Ne manquez pas les événements de la franchise : conventions, sorties de nouveaux opus, etc.</p>
-        </section>
+        <div class="sections-grid">
+            <!-- Actualités -->
+            <div class="section-card">
+                <a href="actualites.html">
+                    <div class="image-wrapper">
+                        <img src="images/assassins_creed1.png.PNG" alt="Actualités Assassin's Creed">
+                        <div class="overlay">
+                            <p>Explorez les dernières actualités de la franchise.</p>
+                        </div>
+                    </div>
+                    <h2>Actualités</h2>
+                </a>
+            </div>
+
+            <!-- Événements -->
+            <div class="section-card">
+                <a href="evenements.html">
+                    <div class="image-wrapper">
+                        <img src="images/assassins_creed2.png.PNG" alt="Événements Assassin's Creed">
+                        <div class="overlay">
+                            <p>Découvrez les événements spéciaux de la série.</p>
+                        </div>
+                    </div>
+                    <h2>Événements</h2>
+                </a>
+            </div>
+
+            <!-- Galerie -->
+            <div class="section-card">
+                <a href="galerie.html">
+                    <div class="image-wrapper">
+                        <img src="images/assassins_creed3.png.PNG" alt="Galerie Assassin's Creed">
+                        <div class="overlay">
+                            <p>Parcourez notre galerie visuelle.</p>
+                        </div>
+                    </div>
+                    <h2>Galerie</h2>
+                </a>
+            </div>
+        </div>
     </main>
+
+    <!-- Footer -->
     <footer>
         <p>&copy; 2024 Fansite - Tous droits réservés</p>
-        <ul>
-            <li><a href="https://facebook.com" target="_blank">Facebook</a></li>
-            <li><a href="https://twitter.com" target="_blank">Twitter</a></li>
-            <li><a href="https://instagram.com" target="_blank">Instagram</a></li>
-        </ul>
     </footer>
 </body>
 </html>
