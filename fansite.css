@@ -34,9 +34,9 @@ body {
     position: relative;
     transition: color 0.3s ease;
 }
-
 .navbar .nav-link.active {
-    color: #00c9ff; /* Couleur différente pour la page active */
+    color: #e0e0e0; /* Même couleur que les autres liens */
+    text-decoration: none; /* Assure qu'il n'y a pas de soulignement */
 }
 
 /* LIGNE ANIMÉE EN SURBRILLANCE */
@@ -210,5 +210,39 @@ footer {
     text-align: center;
     background: #181822;
     color: #e0e0e0;
-    padding: 1rem;
+    padding: 2rem 1rem; /* Plus de padding pour une meilleure lisibilité */
+}
+
+/* CONTAINER DES LIENS EXTERNES */
+.footer-links {
+    display: flex; /* Utilisation de flexbox pour un positionnement fluide */
+    flex-wrap: wrap; /* Permet aux éléments de passer à la ligne si nécessaire */
+    justify-content: center; /* Centre horizontalement les liens */
+    gap: 1rem; /* Espacement entre les liens */
+    max-width: 1200px; /* Limite la largeur totale pour éviter le défilement horizontal */
+    margin: 0 auto; /* Centre le conteneur du footer */
+    padding: 1rem 0;
+}
+
+/* STYLE DES LIENS */
+.footer-links div {
+    flex: 1 1 calc(25% - 1rem); /* Chaque lien prend 25% de la largeur */
+    min-width: 150px; /* Largeur minimale pour éviter l'écrasement */
+    text-align: center; /* Centre le texte dans chaque bloc */
+}
+
+.footer-links h3 {
+    font-size: 1rem;
+    color: #ffffff; /* Couleur claire pour le titre */
+    margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+    text-decoration: none; /* Supprime le soulignement des liens */
+    color: #6c63ff; /* Couleur des liens */
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #00c9ff; /* Couleur différente au survol */
 }
