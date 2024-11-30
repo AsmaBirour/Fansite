@@ -1,5 +1,3 @@
-/* fansite.css */
-
 /* RESET CSS */
 * {
     margin: 0;
@@ -7,109 +5,276 @@
     box-sizing: border-box;
 }
 
-/* BODY */
+/* BODY : Thème sombre */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Gruppo', sans-serif;
+    background: #1e1e2b; /* Fond sombre mais pas trop prononcé */
+    color: #F9CB9C; /* Texte clair pour lisibilité */
     line-height: 1.6;
-    color: #333;
-    background: #f4f4f4;
+}
+
+
+/* NAVIGATION : BARRE PRINCIPALE */
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none; /* Supprime les points ou puces */
+    background: #1e1e2b; /* Fond sombre */
+    padding: 1rem 0;
+    flex-wrap: wrap;
+    position: relative;
     margin: 0;
 }
 
-/* HEADER */
-header {
-    background: #222;
-    color: #fff;
-    padding: 1rem;
-}
-
-header nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-}
-
-header nav ul li a {
-    text-decoration: none;
-    color: white;
+/* STYLE DES LIENS */
+.navbar .nav-link {
+    text-decoration: none; /* Supprime le soulignement par défaut */
+    font-family: 'Gruppo', sans-serif;
+    color: #F9CB9C; /* Texte clair */
+    font-size: 1.2rem;
     font-weight: bold;
+    margin: 0 1rem;
+    position: relative;
+    transition: color 0.3s ease;
+}
+.navbar .nav-link.active {
+    color: #F9CB9C; /* Même couleur que les autres liens */
+    text-decoration: none; /* Assure qu'il n'y a pas de soulignement */
 }
 
-/* MAIN */
-main {
-    padding: 2rem;
+/* LIGNE ANIMÉE EN SURBRILLANCE */
+.navbar .nav-link::after {
+    content: "";
+    font-family: 'Gruppo', sans-serif;
+    position: absolute;
+    bottom: -5px; /* Position juste en dessous du texte */
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: #f8f8f9; /* Couleur de la ligne */
+    transition: width 0.3s ease;
+}
+
+.navbar .nav-link:hover::after, 
+.navbar .nav-link:focus::after {
+    width: 100%; /* Ligne s'étend sur toute la largeur au survol */
+}
+
+.navbar .nav-link:hover {
+    color: #f2f2f7; /* Change la couleur du texte au survol */
+}
+
+/* ADAPTATION ACCESSIBLE POUR LA NAVIGATION */
+.navbar .nav-link:focus {
+    outline: 2px solid #00c9ff; /* Bordure de focus pour clavier et lecteurs d'écran */
+    outline-offset: 3px;
+}
+/* TITRES PRINCIPAUX CENTRÉS */
+h1 {
+    text-align: center; /* Centre le texte */
+    font-size: 2.5rem; /* Taille ajustée pour un impact visuel */
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    color: #f1f1eb; /* Texte clair pour contraste */
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Légère ombre pour style */
+}
+
+/* TITRE ASSASSIN'S CREED */
+.section-card:nth-child(1) h2 {
+    color: #F9CB9C;  /* Exemple de couleur pour Assassin's Creed */
+    text-decoration: underline; /* Ajoute un soulignement */
+    text-decoration-color: #F9CB9C;
+}
+
+/* TITRE HARRY POTTER */
+.section-card:nth-child(2) h2 {
+    color: #F9CB9C;  /* Exemple de couleur pour Harry Potter */
+    text-decoration: underline; /* Ajoute un soulignement */
+    text-decoration-color: #F9CB9C;
+}
+
+/* TITRE SUPER SMASH BROS */
+.section-card:nth-child(3) h2 {
+    color: #F9CB9C;  /* Exemple de couleur pour Super Smash Bros */
+    text-decoration: underline; /* Ajoute un soulignement */
+    text-decoration-color: #F9CB9C;
+}
+
+/* GRILLE DES SECTIONS */
+.sections-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem auto;
+    max-width: 1200px;
+    padding: 0 1rem;
+}
+
+/* CARTES AVEC IMAGES INTERACTIVES */
+.section-card {
     text-align: center;
+    background: #222233;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
+}
+.section-card:hover {
+    box-shadow: 0 4px 15px rgba(245, 242, 242, 0.7);  /* Ombre sur l'image lorsque la souris est dessus */
 }
 
-/* ARTICLES ET GALERIES */
-.franchises, section {
+.image-wrapper {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
+.image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s ease;
+}
+
+.image-wrapper:hover img {
+    opacity: 0.7; /* Effet d'assombrissement */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7); /* Surbrillance sombre */
+    color: rgb(255, 255, 255);
     display: flex;
     justify-content: center;
-    gap: 1rem;
-    margin: 2rem 0;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
-.franchises article, section img {
-    max-width: 300px;
-    border: 1px solid #ddd;
+.image-wrapper:hover .overlay {
+    opacity: 1;
+}
+
+/* FORMULAIRE - Mise en page */
+.contact-form {
+    max-width: 600px;
+    margin: 2rem auto;
+    background: #252540; /* Fond sombre du formulaire */
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Étiquettes et champs */
+.contact-form .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.contact-form label {
+    display: block;
+    font-size: 1rem;
+    color: #F9CB9C; /* Texte clair */
+    margin-bottom: 0.5rem;
+}
+
+.contact-form input, 
+.contact-form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: 1px solid #444455;
+    border-radius: 5px;
+    background: #1e1e2b; /* Fond des champs */
+    color: #e0e0e0; /* Texte clair */
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form input:focus, 
+.contact-form textarea:focus {
+    border-color: #f7f7f7; /* Bordure en surbrillance */
+    box-shadow: 0 0 5px rgba(108, 99, 255, 0.5);
+}
+
+/* Bouton d'envoi */
+.submit-button {
+    display: inline-block;
+    width: 100%;
     padding: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    font-size: 1.2rem;
+    color: #ffffff;
+    background: #6c63ff; /* Couleur vive du bouton */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.submit-button:hover {
+    background: #00c9ff;
+    transform: scale(1.05); /* Légère animation au survol */
+}
+
+/* CENTRAGE DU TEXTE (PARAGRAPHES GÉNÉRAUX) */
+main p {
+    text-align: center; /* Centre horizontalement le texte */
+    font-size: 1rem; /* Taille lisible pour tout écran */
+    margin: 1rem auto; /* Espacement vertical */
+    color: #d3d3d3; /* Couleur douce pour le fond sombre */
+    max-width: 800px; /* Largeur maximale pour une bonne lisibilité */
+    line-height: 1.8; /* Espacement entre les lignes */
+}
+
+/* CENTRAGE DU FORMULAIRE */
+.contact-form {
+    margin: 2rem auto; /* Centre le formulaire horizontalement */
 }
 
 /* FOOTER */
 footer {
-    background: #222;
-    color: #fff;
-    padding: 1rem;
     text-align: center;
+    background: #181822;
+    color: #e0e0e0;
+    padding: 2rem 1rem; /* Plus de padding pour une meilleure lisibilité */
 }
 
-footer ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
+/* CONTAINER DES LIENS EXTERNES */
+.footer-links {
+    display: flex; /* Utilisation de flexbox pour un positionnement fluide */
+    flex-wrap: wrap; /* Permet aux éléments de passer à la ligne si nécessaire */
+    justify-content: center; /* Centre horizontalement les liens */
+    gap: 1rem; /* Espacement entre les liens */
+    max-width: 1200px; /* Limite la largeur totale pour éviter le défilement horizontal */
+    margin: 0 auto; /* Centre le conteneur du footer */
+    padding: 1rem 0;
 }
 
-/* FORMULAIRES */
-form {
-    max-width: 500px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+/* STYLE DES LIENS */
+.footer-links div {
+    flex: 1 1 calc(25% - 1rem); /* Chaque lien prend 25% de la largeur */
+    min-width: 150px; /* Largeur minimale pour éviter l'écrasement */
+    text-align: center; /* Centre le texte dans chaque bloc */
 }
 
-form label {
-    font-weight: bold;
+.footer-links h3 {
+    font-size: 1rem;
+    color: #ffffff; /* Couleur claire pour le titre */
+    margin-bottom: 0.5rem;
 }
 
-form input, form textarea {
-    padding: 0.5rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+.footer-links a {
+    text-decoration: none; /* Supprime le soulignement des liens */
+    color: #fcfbfe; /* Couleur des liens */
+    transition: color 0.3s ease;
 }
 
-form button {
-    background: #007BFF;
-    color: white;
-    padding: 0.5rem;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+.footer-links a:hover {
+    color: #f1f5f6; /* Couleur différente au survol */
 }
-
-form button:hover {
-    background: #0056b3;
-}
-
-/* MEDIA QUERIES */
-@media (max-width: 768px) {
-    header nav ul {
-        flex-direction: column;
-    }
 
     .franchises, section {
         flex-direction: column;
