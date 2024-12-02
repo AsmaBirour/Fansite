@@ -120,7 +120,9 @@ h1 {
 .banniere
 {
     display: flex;
+    
 }
+
 /* CARTES AVEC IMAGES INTERACTIVES */
 .section-card {
     text-align: center;
@@ -230,6 +232,7 @@ h1 {
 }
 
 /* CENTRAGE DU TEXTE (PARAGRAPHES GÉNÉRAUX) */
+
 main p {
     text-align: center; /* Centre horizontalement le texte */
     font-size: 1rem; /* Taille lisible pour tout écran */
@@ -247,7 +250,8 @@ main p {
 /* FOOTER */
 footer {
     text-align: center;
-    background: #181822;
+    background:  #181822f6;
+
     color: #e0e0e0;
     padding: 2rem 1rem; /* Plus de padding pour une meilleure lisibilité */
 }
