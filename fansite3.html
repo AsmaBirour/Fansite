@@ -3,75 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Fansite consacré à Super Smash Bros : actualités, événements, et héros épiques.">
+    <meta name="description" content="Fansite consacré à Super Smash Bros : actualités, événements, et galerie.">
     <title>Fansite - Super Smash Bros</title>
+    <!-- Lien vers le fichier CSS global -->
     <link rel="stylesheet" href="fansite.css">
-    <link rel="stylesheet" href="fansite3.css">
 </head>
 <body>
+    <!-- Barre de navigation -->
     <header>
         <nav>
-            <ul>
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="fansite1.html">Assassin's Creed</a></li>
-                <li><a href="fansite2.html">Harry Potter</a></li>
-                <li><a href="fansite3.html">Super Smash Bros</a></li>
-                <li><a href="contact.html">Contact</a></li>
+            <ul class="navbar">
+                <li><a href="index.html" class="nav-link active">Accueil</a></li>
+                <li><a href="fansite1.html" class="nav-link">Assassin's Creed</a></li>
+                <li><a href="fansite2.html" class="nav-link">Harry Potter</a></li>
+                <li><a href="fansite3.html" class="nav-link">Super Smash Bros</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
             </ul>
         </nav>
     </header>
-
+      
+    <!-- Contenu principal -->
     <main>
-        <div class="banniere-image">
-            <div class="banniere-texte">
-              <h1>Super Smash Bros.</h1>
-            </div>
-          </div> 
-        <section>
-            <h2>Actualités</h2>
-            <p>Découvrez les mises à jour, tournois, et nouveaux personnages !</p>
-        </section>
-        <section>
-            <h2>Galerie</h2>
-            <div id="galerie">
-                <article class="container-galerie">
-                    <img src="img/fansite3/roster.png" alt="Personnages Super Smash Bros. Ultimate" >
-                    <div class="container-texte-galerie">
-                      <h3>Roster Super Smash Bros. Ultimate</h3>
-                      <p>Liste des personnages jouables de la dernière itération de la série, en excluant les DLC.</p>
+        <h1>Super Smash Bros</h1>
+        <div class="sections-grid">
+            <!-- Carte pour Actualités -->
+            <div class="section-card">
+                <a href="actualites.html">
+                    <div class="image-wrapper">
+                        <img src="images/ssb-actualites.png" alt="Actualités Super Smash Bros">
+                        <div class="overlay">
+                            <p>Découvrez les dernières actualités sur Super Smash Bros.</p>
+                        </div>
                     </div>
-                </article>
-    
-                <article class="container-galerie">
-                    <img src="img/fansite3/sora-smash.jpg" alt="Sora serrant la main de Mario" >
-                    <div class="container-texte-galerie">
-                        <h3>Arrivée de Sora</h3>
-                        <p>Sora est jouable depuis le 18 octobre 2021. Il s'agit du tout dernier personnage, Nintendo a annoncé qu'il n'y en aura pas d'autre.</p>
-                    </div>
-                </article>
-
-                <article class="container-galerie">
-                    <img src="img/fansite3/parry.jpg" alt="Fox bloquant l'attaque de Roy" >
-                    <div class="container-texte-galerie">
-                        <h3>Parade</h3>
-                        <p>Si vous relâchez votre bouclier au moment de prendre un coup, vous bloquerez l'attaque et pourrez agir plus rapidement, et donc prendre l'avantage !</p>
-                    </div>
-                </article>
+                    <h2>Actualités</h2>
+                </a>
             </div>
 
-        </section>
-        <section>
-            <h2>Événements</h2>
-            <p>Ne manquez pas les événements : tournois mondiaux et compétitions locales.</p>
-        </section>
+            <!-- Carte pour Événements -->
+            <div class="section-card">
+                <a href="evenements.html">
+                    <div class="image-wrapper">
+                        <img src="images/ssb-evenements.jpg" alt="Événements Super Smash Bros">
+                        <div class="overlay">
+                            <p>Participez à des événements compétitifs.</p>
+                        </div>
+                    </div>
+                    <h2>Événements</h2>
+                </a>
+            </div>
+
+            <!-- Carte pour Galerie -->
+            <div class="section-card">
+                <a href="galerie.html">
+                    <div class="image-wrapper">
+                        <img src="images/ssb-galerie.jpg" alt="Galerie Super Smash Bros">
+                        <div class="overlay">
+                            <p>Parcourez notre galerie des moments forts.</p>
+                        </div>
+                    </div>
+                    <h2>Galerie</h2>
+                </a>
+            </div>
+        </div>
     </main>
+
+    <!-- Footer -->
     <footer>
         <p>&copy; 2024 Fansite - Tous droits réservés</p>
-        <ul>
-            <li><a href="https://facebook.com" target="_blank">Facebook</a></li>
-            <li><a href="https://twitter.com" target="_blank">Twitter</a></li>
-            <li><a href="https://instagram.com" target="_blank">Instagram</a></li>
-        </ul>
     </footer>
 </body>
 </html>
