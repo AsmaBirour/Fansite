@@ -13,6 +13,12 @@ body {
     line-height: 1.6;
 }
 
+.navbar .logo {
+    height: 40px;  /* Vous pouvez ajuster la taille du logo */
+    margin-right: 10px;  /* Espacement à droite du logo */
+    vertical-align: middle;  /* Aligne le logo verticalement avec le texte */
+}
+
 
 /* NAVIGATION : BARRE PRINCIPALE */
 .navbar {
@@ -67,15 +73,14 @@ body {
 
 /* ADAPTATION ACCESSIBLE POUR LA NAVIGATION */
 .navbar .nav-link:focus {
-    outline: 2px solid #00c9ff; /* Bordure de focus pour clavier et lecteurs d'écran */
+    outline: 2px solid #e0e0e0; /* Bordure de focus pour clavier et lecteurs d'écran */
     outline-offset: 3px;
 }
 /* TITRES PRINCIPAUX CENTRÉS */
 h1 {
     text-align: center; /* Centre le texte */
     font-size: 2.5rem; /* Taille ajustée pour un impact visuel */
-    margin-top: 1rem;
-    margin-bottom: 2rem;
+    margin: 1rem 0 2rem;
     color: #f1f1eb; /* Texte clair pour contraste */
     text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Légère ombre pour style */
 }
@@ -109,6 +114,7 @@ h1 {
     margin: 2rem auto;
     max-width: 1200px;
     padding: 0 1rem;
+    overflow: hidden;
 }
 
 /* CARTES AVEC IMAGES INTERACTIVES */
@@ -171,13 +177,13 @@ h1 {
 
 /* Étiquettes et champs */
 .contact-form .form-group {
+    color: #e0e0e0
     margin-bottom: 1.5rem;
 }
 
 .contact-form label {
     display: block;
     font-size: 1rem;
-    color: #F9CB9C; /* Texte clair */
     margin-bottom: 0.5rem;
 }
 
