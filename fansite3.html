@@ -3,46 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Fansite consacré à Super Smash Bros : actualités, événements, et héros épiques.">
+    <meta name="description" content="Fansite consacré à Super Smash Bros : actualités, événements, et galerie.">
     <title>Fansite - Super Smash Bros</title>
+    <!-- Lien vers le fichier CSS global -->
     <link rel="stylesheet" href="fansite.css">
     <link href="https://fonts.googleapis.com/css2?family=Gruppo&display=swap" rel="stylesheet">
-
+    <link rel="icon" href="images/logogo.png" type="image/x-icon">
+    <link rel="apple-touch-icon" href="images/logoo.png">
+    <link rel="icon" sizes="192x192" href="images/logoo.png"> <!-- Pour les appareils Android -->
 </head>
 <body>
+            <!-- Barre de navigation principale -->
     <header>
         <nav>
-            <ul>
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="fansite1.html">Assassin's Creed</a></li>
-                <li><a href="fansite2.html">Harry Potter</a></li>
-                <li><a href="fansite3.html">Super Smash Bros</a></li>
-                <li><a href="contact.html">Contact</a></li>
+            <ul class="navbar">
+                <li>
+                    <div class="logo-container">
+                        <img src="images/logogo.png" alt="Logo" class="logo">
+                    </a>
+                </li>
+            <ul class="navbar">
+                <li><a href="index.html" class="nav-link active">Accueil</a></li>
+                <li><a href="fansite1.html" class="nav-link">Assassin's Creed</a></li>
+                <li><a href="fansite2.html" class="nav-link">Harry Potter</a></li>
+                <li><a href="fansite3.html" class="nav-link">Super Smash Bros</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
             </ul>
         </nav>
     </header>
+      
+    <!-- Contenu principal -->
     <main>
         <h1>Super Smash Bros</h1>
-        <section>
-            <h2>Actualités</h2>
-            <p>Découvrez les mises à jour, tournois, et nouveaux personnages !</p>
-        </section>
-        <section>
-            <h2>Galerie</h2>
-            <img src="images/mario.jpg" alt="Photos de Super Smash Bros">
-        </section>
-        <section>
-            <h2>Événements</h2>
-            <p>Ne manquez pas les événements : tournois mondiaux et compétitions locales.</p>
-        </section>
+        <div class="sections-grid">
+            <!-- Carte pour Actualités -->
+            <div class="section-card">
+                <a href="actualites.html">
+                    <div class="image-wrapper">
+                        <img src="images/ssb-actualites.png" alt="Actualités Super Smash Bros">
+                        <div class="overlay">
+                            <p>Découvrez les dernières actualités sur Super Smash Bros.</p>
+                        </div>
+                    </div>
+                    <h2>Actualités</h2>
+                </a>
+            </div>
+
+            <!-- Carte pour Événements -->
+            <div class="section-card">
+                <a href="evenements.html">
+                    <div class="image-wrapper">
+                        <img src="images/ssb-evenements.jpg" alt="Événements Super Smash Bros">
+                        <div class="overlay">
+                            <p>Participez à des événements compétitifs.</p>
+                        </div>
+                    </div>
+                    <h2>Événements</h2>
+                </a>
+            </div>
+
+            <!-- Carte pour Galerie -->
+            <div class="section-card">
+                <a href="galerie.html">
+                    <div class="image-wrapper">
+                        <img src="images/ssb-galerie.jpg" alt="Galerie Super Smash Bros">
+                        <div class="overlay">
+                            <p>Parcourez notre galerie des moments forts.</p>
+                        </div>
+                    </div>
+                    <h2>Galerie</h2>
+                </a>
+            </div>
+        </div>
     </main>
+
+    <!-- Footer -->
     <footer>
         <p>&copy; 2024 Fansite - Tous droits réservés</p>
-        <ul>
-            <li><a href="https://facebook.com" target="_blank">Facebook</a></li>
-            <li><a href="https://twitter.com" target="_blank">Twitter</a></li>
-            <li><a href="https://instagram.com" target="_blank">Instagram</a></li>
-        </ul>
     </footer>
 </body>
 </html>
