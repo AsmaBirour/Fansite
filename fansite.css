@@ -117,6 +117,10 @@ h1 {
     overflow: hidden;
 }
 
+.banniere
+{
+    display: flex;
+}
 /* CARTES AVEC IMAGES INTERACTIVES */
 .section-card {
     text-align: center;
