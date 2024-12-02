@@ -177,7 +177,7 @@ h1 {
 
 /* Étiquettes et champs */
 .contact-form .form-group {
-    color: #e0e0e0
+    color: #e0e0e0;
     margin-bottom: 1.5rem;
 }
 
@@ -285,4 +285,4 @@ footer {
     .franchises, section {
         flex-direction: column;
     }
-}
+
