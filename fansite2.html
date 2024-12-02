@@ -3,9 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Harry Potter</title>
+    <meta name="description" content="Fansite consacré à Harry Potter : présentation, adaptation et galerie.">
+    <title>Fansite - Harry Potter</title>
+    <link rel="stylesheet" href="fansite.css">
 </head>
 <body>
-    
+    <!-- Barre de navigation principale -->
+    <header>
+        <nav>
+            <ul class="navbar">
+                <li><a href="index.html" class="nav-link active">Accueil</a></li>
+                <li><a href="fansite1.html" class="nav-link">Assassin's Creed</a></li>
+                <li><a href="fansite2.html" class="nav-link">Harry Potter</a></li>
+                <li><a href="fansite3.html" class="nav-link">Super Smash Bros</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+      
+    <!-- Section principale avec cartes -->
+    <main>
+        <h1>Harry Potter</h1>
+        <div class="sections-grid">
+            <!-- Actualités -->
+            <div class="section-card">
+                <a href="actualites.html">
+                    <div class="image-wrapper">
+                        <img src="images/harry_potter.jpg" alt="Présentation Harry Potter">
+                        <div class="overlay">
+                            <p>Découvrez l'actualités autour de Harry Potter.</p>
+                        </div>
+                    </div>
+                    <h2>Actualités</h2>
+                </a>
+            </div>
+
+            <!-- Evénements -->
+            <div class="section-card">
+                <a href="evenements.html">
+                    <div class="image-wrapper">
+                        <img src="images/hp4.jpg" alt="Adaptation Harry Potter">
+                        <div class="overlay">
+                            <p>Les événements autour d'Harry Potter.</p>
+                        </div>
+                    </div>
+                    <h2>Evénements</h2>
+                </a>
+            </div>
+
+            <!-- Galerie -->
+            <div class="section-card">
+                <a href="galerie.html">
+                    <div class="image-wrapper">
+                        <img src="images/hp8.jpg" alt="Galerie Harry Potter">
+                        <div class="overlay">
+                            <p>Plongez dans notre galerie magique.</p>
+                        </div>
+                    </div>
+                    <h2>Galerie</h2>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer spécifique au fansite 2 -->
+    <footer>
+        <h2>Liens externes</h2>
+        <div class="footer-links">
+            <div>
+                <h3>Auteur : J.K. Rowling</h3>
+                <a href="http://www.jkrowling.com/fr" target="_blank">Lien officiel</a>
+            </div>
+            <div>
+                <h3>Éditeur : Scholastic</h3>
+                <a href="http://harrypotter.scholastic.com/" target="_blank">Lien officiel</a>
+            </div>
+            <div>
+                <h3>Éditeur : Bloomsbury</h3>
+                <a href="http://harrypotter.bloomsbury.com/" target="_blank">Lien officiel</a>
+            </div>
+            <div>
+                <h3>Films : Warner Bros</h3>
+                <a href="http://www.harrypotterwizardscollection.com/" target="_blank">Lien officiel</a>
+            </div>
+        </div>
+        <p>&copy; 2024 Fansite - Tous droits réservés</p>
+    </footer>   
 </body>
 </html>
