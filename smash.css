@@ -33,3 +33,8 @@ article ul li
     color: white;
 
 }
+
+.image-wrapper img
+{
+    object-fit: contain;
+}
