@@ -9,7 +9,7 @@
 body {
     font-family: 'Arial', sans-serif;
     background: #1e1e2b; /* Fond sombre mais pas trop prononcé */
-    color: #e0e0e0; /* Texte clair pour lisibilité */
+    color: #f9cb9c; /* Texte clair pour lisibilité */
     line-height: 1.6;
 }
 
@@ -27,7 +27,7 @@ body {
 /* STYLE DES LIENS */
 .navbar .nav-link {
     text-decoration: none; /* Supprime le soulignement par défaut */
-    color: #e0e0e0; /* Texte clair */
+    color: #f9cb9c; /* Texte clair */
     font-size: 1.2rem;
     font-weight: bold;
     margin: 0 1rem;
@@ -35,7 +35,7 @@ body {
     transition: color 0.3s ease;
 }
 .navbar .nav-link.active {
-    color: #e0e0e0; /* Même couleur que les autres liens */
+    color: #f9cb9c; /* Même couleur que les autres liens */
     text-decoration: none; /* Assure qu'il n'y a pas de soulignement */
 }
 
@@ -47,7 +47,7 @@ body {
     left: 0;
     width: 0;
     height: 3px;
-    background: #6c63ff; /* Couleur de la ligne */
+    background: #f9cb9c; /* Couleur de la ligne */
     transition: width 0.3s ease;
 }
 
@@ -57,12 +57,12 @@ body {
 }
 
 .navbar .nav-link:hover {
-    color: #6c63ff; /* Change la couleur du texte au survol */
+    color: #f9cb9c; /* Change la couleur du texte au survol */
 }
 
 /* ADAPTATION ACCESSIBLE POUR LA NAVIGATION */
 .navbar .nav-link:focus {
-    outline: 2px solid #00c9ff; /* Bordure de focus pour clavier et lecteurs d'écran */
+    outline: 2px solid #f9cb9c; /* Bordure de focus pour clavier et lecteurs d'écran */
     outline-offset: 3px;
 }
 /* TITRES PRINCIPAUX CENTRÉS */
@@ -71,7 +71,7 @@ h1 {
     font-size: 2.5rem; /* Taille ajustée pour un impact visuel */
     margin-top: 1rem;
     margin-bottom: 2rem;
-    color: #ffffff; /* Texte clair pour contraste */
+    color: #f9cb9c; /* Texte clair pour contraste */
     text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Légère ombre pour style */
 }
 
@@ -79,10 +79,10 @@ h1 {
 .sections-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1.5rem;
+    gap: 2rem;
     margin: 2rem auto;
     max-width: 1200px;
-    padding: 0 1rem;
+    padding: 1rem;
 }
 
 /* CARTES AVEC IMAGES INTERACTIVES */
@@ -91,7 +91,20 @@ h1 {
     background: #222233;
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
+    box-shadow: 0 4px 15px rgba(9, 9, 9, 9);
+}
+.section-card h2 {
+    border: none; /* Supprime les bordures éventuelles */
+    text-decoration: none; /* Supprime les soulignements */
+    font-size: 1.5rem; /* Ajuste la taille */
+    color: #f9cb9c; /* Couleur du texte */
+    margin-top: 0.5rem; /* Ajoute un espacement */
+}
+
+.section-card p {
+    font-size: 1rem; /* Ajuste la taille */
+    color: #f9cb9c; /* Couleur douce  */
+    margin-top: 0.5rem; /* Ajoute de l'espace */
 }
 
 .image-wrapper {
@@ -100,15 +113,18 @@ h1 {
     overflow: hidden;
 }
 
+/* IMAGES DYNAMIQUES */
 .image-wrapper img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: opacity 0.3s ease;
+    transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .image-wrapper:hover img {
-    opacity: 0.7; /* Effet d'assombrissement */
+    transform: scale(1.05); /* Zoom léger */
+    opacity: 0.8; /* Assombrissement léger */
 }
 
 .overlay {
@@ -130,6 +146,16 @@ h1 {
     opacity: 1;
 }
 
+/* Styliser les titres spécifiques avec la classe "title" */
+.title {
+    color: #f9cb9c; /* Couleur spécifique */
+    font-size: 1.8rem; /* Taille ajustée */
+    font-weight: bold; /* Texte en gras */
+    text-align: center; /* Centré */
+    position: relative; /* Nécessaire pour positionner la ligne en dessous */
+    margin-bottom: 1rem; /* Espacement sous le titre */
+}
+
 /* FORMULAIRE - Mise en page */
 .contact-form {
     max-width: 600px;
@@ -148,7 +174,7 @@ h1 {
 .contact-form label {
     display: block;
     font-size: 1rem;
-    color: #e0e0e0; /* Texte clair */
+    color: #f9cb9c; /* Texte clair */
     margin-bottom: 0.5rem;
 }
 
@@ -160,14 +186,14 @@ h1 {
     border: 1px solid #444455;
     border-radius: 5px;
     background: #1e1e2b; /* Fond des champs */
-    color: #e0e0e0; /* Texte clair */
+    color: #f9cb9c; /* Texte clair */
     outline: none;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .contact-form input:focus, 
 .contact-form textarea:focus {
-    border-color: #6c63ff; /* Bordure en surbrillance */
+    border-color: #f9cb9c; /* Bordure en surbrillance */
     box-shadow: 0 0 5px rgba(108, 99, 255, 0.5);
 }
 
@@ -178,7 +204,7 @@ h1 {
     padding: 1rem;
     font-size: 1.2rem;
     color: #ffffff;
-    background: #6c63ff; /* Couleur vive du bouton */
+    background: #f9cb9c; /* Couleur vive du bouton */
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -186,7 +212,7 @@ h1 {
 }
 
 .submit-button:hover {
-    background: #00c9ff;
+    background: #f9cb9c;
     transform: scale(1.05); /* Légère animation au survol */
 }
 
@@ -195,7 +221,7 @@ main p {
     text-align: center; /* Centre horizontalement le texte */
     font-size: 1rem; /* Taille lisible pour tout écran */
     margin: 1rem auto; /* Espacement vertical */
-    color: #d3d3d3; /* Couleur douce pour le fond sombre */
+    color: #f9cb9c; /* Couleur douce pour le fond sombre */
     max-width: 800px; /* Largeur maximale pour une bonne lisibilité */
     line-height: 1.8; /* Espacement entre les lignes */
 }
@@ -209,8 +235,19 @@ main p {
 footer {
     text-align: center;
     background: #181822;
-    color: #e0e0e0;
+    color: #ffffff;
     padding: 2rem 1rem; /* Plus de padding pour une meilleure lisibilité */
+}
+
+.footer-links a {
+    color: #f9cb9c; /* Couleur par défaut */
+    text-decoration: none; /* Supprime le soulignement */
+    font-weight: bold; /* Met en gras */
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #8c490a; /* Changement de couleur au survol */
 }
 
 /* CONTAINER DES LIENS EXTERNES */
@@ -239,10 +276,30 @@ footer {
 
 .footer-links a {
     text-decoration: none; /* Supprime le soulignement des liens */
-    color: #6c63ff; /* Couleur des liens */
+    color: #f9cb9c; /* Couleur des liens */
     transition: color 0.3s ease;
 }
 
 .footer-links a:hover {
-    color: #00c9ff; /* Couleur différente au survol */
+    color: #8c490a; /* Couleur différente au survol */
+}
+/* Bouton Retour (Fixe) */
+.btn-home {
+    position: fixed; /* Position fixe : reste visible même au défilement */
+    top: 10px; /* Distance par rapport au haut de la page */
+    left: 10px; /* Distance par rapport au bord gauche */
+    background-color: #f9cb9c; /* Couleur de fond */
+    color: #1e1e2b; /* Couleur du texte */
+    padding: 8px 12px; /* Espacement interne */
+    border-radius: 5px; /* Coins arrondis */
+    text-decoration: none; /* Pas de soulignement */
+    font-weight: bold; /* Texte en gras */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Légère ombre */
+    z-index: 1000; /* S'assure que le bouton est au-dessus du contenu */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-home:hover {
+    background-color: #8c490a; /* Couleur différente au survol */
+    transform: scale(1.1); /* Agrandissement léger au survol */
 }
